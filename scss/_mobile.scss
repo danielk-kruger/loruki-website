@@ -1,0 +1,75 @@
+// Tablets and under
+@media (max-width: 768px) {
+	.grid,
+	.showcase .grid,
+	.stats .grid,
+	.cli .grid,
+	.cloud.grid {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+	}
+
+	.showcase {
+		height: auto;
+
+		&-text {
+			text-align: center;
+			margin-top: 40px;
+			animation: slideInFromTop 0.8s ease-in;
+		}
+
+		&-form {
+			justify-self: center;
+			margin: auto;
+			animation: slideInFromBottom 0.8s ease-in;
+		}
+	}
+
+	.cli {
+		.grid {
+			*:first-child {
+				grid-column: 1;
+				grid-row: 1;
+			}
+		}
+	}
+
+	.features-head,
+	.features-sub-head,
+	.docs-head {
+		text-align: center;
+	}
+
+	.features-head img,
+	.features-sub-head img,
+	.docs-head img {
+		justify-self: center;
+	}
+
+	.features-main {
+		.grid {
+			*:first-child,
+			*:nth-child(2) {
+				grid-column: 1;
+			}
+		}
+	}
+}
+
+// Mobile
+
+@media (max-width: 500px) {
+	.navbar {
+		height: 110px;
+
+		.flex {
+			flex-direction: column;
+		}
+
+		ul {
+			padding: 0.625rem;
+			background-color: rgba(0, 0, 0, 0.1);
+			border-radius: 10px;
+		}
+	}
+}

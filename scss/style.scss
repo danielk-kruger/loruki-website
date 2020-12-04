@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import 'utilities';
+
+.navbar {
+	background-color: $primary-color;
+	color: #fff;
+	height: 70px;
+
+	.flex {
+		justify-content: space-between;
+	}
+
+	ul {
+		display: flex;
+
+		a {
+			color: #fff;
+			padding: 10px;
+			margin: 0 5px;
+			transition: all 0.45s ease;
+
+			&:hover {
+				border-bottom: 2px #fff solid;
+			}
+		}
+	}
+}
+
+.showcase {
+	height: 25rem;
+	background-color: $primary-color;
+	color: #fff;
+	position: relative;
+
+	h1 {
+		font-size: 2.5rem;
+	}
+
+	p {
+		margin: 1.25rem 0;
+	}
+
+	.grid {
+		overflow: visible;
+		grid-template-columns: 55% 45%;
+		gap: 1.875rem;
+	}
+
+	&-text {
+		animation: slideInFromLeft 0.8s ease-in;
+	}
+
+	&-form {
+		position: relative;
+		top: 3.75rem;
+		height: 21.875rem;
+		width: 25rem;
+		padding: 2.5rem;
+		z-index: 100;
+		animation: slideInFromRight 0.8s ease-in;
+
+		input[type='text'],
+		input[type='email'] {
+			border: 0;
+			border-bottom: 1px solid #b4becb;
+			width: 100%;
+			padding: 3px;
+			font-size: 16px;
+		}
+
+		input:focus {
+			outline: none;
+		}
+	}
+
+	.form-control {
+		margin: 1.875rem 0;
+	}
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		height: 100px;
+		bottom: -70px;
+		right: 0;
+		left: 0;
+		background-color: #fff;
+		transform: skewY(-3deg);
+		--webkit-transform: skewY(-3deg);
+		--moz-transform: skewY(-3deg);
+		--ms-transform: skewY(-3deg);
+	}
+}
+
+// STATS
+
+.stats {
+	padding-top: 6.25rem;
+	animation: slideInFromBottom 0.8s ease-in;
+
+	&-heading {
+		max-width: 31.25rem;
+		margin: auto;
+	}
+
+	.grid h3 {
+		font-size: 2.1875rem;
+	}
+
+	.grid p {
+		font-size: 1.25rem;
+		font-weight: bold;
+	}
+}
+
+// CLI
+
+.cli {
+	.grid {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+
+		*:first-child {
+			grid-column: 1 / span 2;
+			grid-row: 1 / span 2;
+		}
+	}
+}
+
+// CLOUD
+
+.cloud {
+	.grid {
+		grid-template-columns: 4fr 3fr;
+	}
+}
+
+// Languages
+
+.languages {
+	.flex {
+		flex-wrap: wrap;
+	}
+
+	.card {
+		text-align: center;
+		margin: 1.125rem 0.625rem 2.5rem;
+		transition: transform 0.2s ease-in;
+
+		&:hover {
+			transform: translateY(-15px);
+		}
+
+		h4 {
+			font-size: 1.25rem;
+			margin-bottom: 0.625rem;
+		}
+	}
+}
+
+// Footer
+
+.footer {
+	.social {
+		a {
+			margin: 0 0.625rem;
+		}
+	}
+}
+
+@import 'features';
+@import 'docs';
+@import 'animations';
+@import 'mobile';
